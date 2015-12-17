@@ -22,10 +22,9 @@ window.onload = function () {
     unorderedListElement = document.createElement("ul")
     listElement = document.createElement("li");
     listElement.innerHTML = item.value;
-    // unorderedListElement.innerHTML = listElement
     list.appendChild(unorderedListElement);
     unorderedListElement.appendChild(listElement)
-    // list.innerHTML = "";
+    item.value = "";
     // listElement.addEventListener("click", turnGray)
 
     listElement.addEventListener("click", function () {
