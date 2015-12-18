@@ -8,14 +8,17 @@
     <script src="/shopping-list.js"></script>
     <link rel="stylesheet" href="/shopping-list.css" media="screen" title="no title" charset="utf-8">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div class="container">
     <h1 class="header" id="header">Shopping List</h1>
-    <form class="list" id="list">
-      <input class="item" type="text" id="item" placeholder="Item" />
-      <input class="add" type="submit" id="add" value="Add Item" />
-    </form>
+      <div class="row">
+        <form class="list col-xs-6 col-md-4" id="list" >
+          <input class="item" type="text" id="item" placeholder="Item" />
+          <input class="add" type="submit" id="add" value="Add Item" />
+        </form>
+      </div>
     </div>
   </body>
 </html>

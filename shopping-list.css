@@ -1,0 +1,71 @@
+body {
+  background: url("https://sayanythingblog.com/wp-content/uploads/2012/12/7C5EA8AB-25F3-4207-ADE7-BDCAC36D5E22.jpg") 50% 50% fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-position: 100%;*/
+
+}
+
+.header {
+  text-align: center;
+  font-family: "Noteworthy";
+  font-weight: bold;
+  color: rgb(26, 237, 155);
+  font-size: 400%;
+  background-color: rgb(42, 37, 40);
+  background-color: rgba(42, 37, 40, 0.48);
+  padding-top: 1%;
+  padding-bottom: 3%;
+  border-radius: 8px;
+}
+
+.list {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  padding-top: 5%;
+}
+
+.add {
+  border-radius: 8px;
+  color: rgb(73, 112, 91);
+  margin-bottom: 1%;
+  margin-left: 2%;
+  font-family: "Charter";
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(224, 134, 127);
+  background-color: rgba(224, 134, 127, .9);
+  border-color: rgb(224, 134, 127);
+}
+
+p {
+  color: rgb(1, 11, 13);
+  color: rgba(1, 11, 13, 0.82);
+  display: inline-block;
+  font-size: 200%;
+  margin-right: 3%;
+  background-color: rgb(26, 237, 155);
+  background-color: rgba(26, 237, 155, .7);
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  border-radius: 8px;
+  font-family: "Noteworthy";
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  color: rgb(224, 134, 127);
+  border-radius: 8px;
+  margin-left: 1%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Charter";
+  background-color: rgb(73, 112, 91);
+  background-color: rgba(73, 112, 91, .9);
+  border-color: rgb(73, 112, 91);
+}
