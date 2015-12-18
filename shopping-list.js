@@ -4,34 +4,40 @@ window.onload = function () {
   var add = document.getElementById("add");
   var ul = document.createElement("ul");
 
-
-
-  // function add() {
-      // var completed = document.createElement("button");
-      // completed.setAttribute("value", "Completed");
-      // element.setAttribute("name", "button3");
-      // element.setAttribute("onclick", "foo()");
-      // document.flotta.appendChild(element);
-  // }
-
-  // var turnGray = function () {
-  //   this.style.color = "gray";
-  // }
-
+  list.appendChild(ul);
+  
   add.addEventListener("click", function () {
     event.preventDefault();
+    // set up list element which contains text, complete btn, delete btn
     var listElement = document.createElement("li");
-    listElement.innerHTML = item.value;
+
+    // set up text element
+    var text = document.createElement("p");
+    var value = item.value;
+    text.innerHTML = value;
+    listElement.appendChild(text);
+
     // set up complete button
     var completed = document.createElement("button");
     completed.innerHTML = "Completed";
     completed.addEventListener("click", function () {
       event.preventDefault();
       console.log("completed");
-      ul.removeChild(listElement);
-      ul.appendChild(listElement);
+      if (this.innerHTML === "Completed") {
+        ul.removeChild(listElement);
+        ul.appendChild(listElement);
+        text.style.color = "gray";
+        text.innerHTML = value.strike();
+        this.innerHTML = "Incomplete";
+      } else {
+        ul.insertBefore(listElement, ul.firstChild);
+        text.style.color = "black";
+        text.innerHTML = value;
+        this.innerHTML = "Completed";
+      }
     });
     listElement.appendChild(completed);
+
     // set up delete button
     var erase = document.createElement("button");
     erase.innerHTML = "X";
@@ -43,25 +49,11 @@ window.onload = function () {
       } else {
         erase.innerHTML = "Delete";
       }
-
-
     });
     listElement.appendChild(erase);
 
-    list.appendChild(ul);
-    ul.appendChild(listElement);
+    ul.insertBefore(listElement, ul.firstChild);
+
     item.value = "";
-
-    // listElement.document.getElement
-    // listElement.addEventListener("click", turnGray)
-
-    // listElement.addEventListener("click", function () {
-    //   this.parentNode.removeChild(this);
-    // });
-
-
   });
-
-
-
 };
